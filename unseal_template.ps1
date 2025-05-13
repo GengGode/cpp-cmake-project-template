@@ -30,3 +30,7 @@ Get-ChildItem -Recurse -Include $fileTypes | ForEach-Object {
         Write-Host "Updated: $($_.FullName)"
     }
 }
+
+git add *
+git commit -am "unseal: init $name"
+code .
