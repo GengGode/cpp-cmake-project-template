@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 
 include(cmake/vcpkg_env.cmake)
+include(cmake/cpm_env.cmake)
 
 project(cpp_cmake_project_template LANGUAGES CXX)
 
@@ -9,10 +10,7 @@ include(cmake/project_setting.cmake)
 include(cmake/auto_increment_version.cmake)
 auto_generate_version(${CMAKE_SOURCE_DIR}/.version ${CMAKE_SOURCE_DIR}/.build_version)
 
-add_subdirectory(source/interface_library)
-add_subdirectory(source/static_library)
-add_subdirectory(source/library)
-add_subdirectory(source/application)
+add_subdirectory(source)
 
 if (BUILD_TESTING)
     include(CTest)
