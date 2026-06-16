@@ -1,3 +1,5 @@
+.vcpkg-lock
 .vcpkg-root
+.vcpkg-target-triplet
 /.vscode
 /build
